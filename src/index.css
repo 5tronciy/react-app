@@ -1,13 +1,197 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.done {
+  text-decoration: line-through;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+  background-color: white;
+}
+
+#todo {
+  width: 100%;
+  min-width: 501px;
+  min-height: 451px;
+  border: solid 2px;
+}
+
+.todo__header {
+  background-color: red;
+  height: 150px;
+  margin-top: 150px;
+}
+
+.todo__title {
+  color: white;
+  font: bold italic 110% sans-serif;
+  font-size: 78pt;
+  height: 78px;
+  vertical-align: text-top;
+  padding-left: 100px;
+  margin-bottom: 16px;
+  line-height: 0.7;
+}
+
+.todo__input {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.todo__input-newTodo {
+  width: 97%;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.todo__buttons {
+  display: flex;
+  justify-content: space-between;
+  background-color: #b8afaf;
+  height: 100px;
+}
+
+.todo__list {
+  min-height: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-text {
+  margin-right: 12px;
+}
+
+.todo__list-li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 100px;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.todo__list-li:nth-child(even) {
+  background: #f7abae;
+}
+
+.todo__list-li:hover {
+  background: #f55b61;
+}
+
+.todo__list-li.checked {
+  background: red;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+.todo__list-li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+  margin-left: 50px;
+}
+
+.todo__btn-edit {
+  position: absolute;
+  right: 50px;
+  top: 0;
+  padding: 12px 19px;
+  border: none;
+}
+
+.todo__btn-edit:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.todo__btn-delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 19px;
+}
+
+.todo__btn-delete:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.todo__btn-removeCompleted {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  color: red;
+  text-align: center;
+  border-radius: 15px;
+  margin: 25px;
+  font-size: 17pt;
+  font-weight: bolder;
+}
+
+.todo__btn-removeCompleted:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.todo__btn-hideUncompleted {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  color: red;
+  text-align: center;
+  border-radius: 15px;
+  margin: 25px;
+  font-size: 17pt;
+  font-weight: bolder;
+}
+
+.todo__btn-hideUncompleted:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.todo__btn-clear {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  color: red;
+  text-align: center;
+  border-radius: 15px;
+  margin: 25px;
+  font-size: 17pt;
+  font-weight: bolder;
+}
+
+.todo__btn-clear:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.todo__btn-showAll {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  color: red;
+  text-align: center;
+  border-radius: 15px;
+  margin: 25px;
+  font-size: 17pt;
+  font-weight: bolder;
+}
+
+.todo__btn-showAll:hover {
+  background-color: #f44336;
+  color: white;
 }
